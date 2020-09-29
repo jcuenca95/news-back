@@ -20,6 +20,11 @@
   },
   "homepage": "https://github.com/jcuenca95/news-back#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.6",
+    "mongoose": "^5.10.7",
+    "mongoose-paginate-v2": "^1.3.9"
   }
 }
