@@ -1,0 +1,25 @@
+{
+  "name": "news-back",
+  "version": "1.0.0",
+  "description": "Rest API that manage CRUD operations for the news resource",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcuenca95/news-back.git"
+  },
+  "keywords": [
+    "news"
+  ],
+  "author": "Jorge Cuenca Costa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcuenca95/news-back/issues"
+  },
+  "homepage": "https://github.com/jcuenca95/news-back#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
