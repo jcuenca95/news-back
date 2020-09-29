@@ -7,6 +7,8 @@ var http = require('http'),
     errorhandler = require('errorhandler'),
     mongoose = require('mongoose');
 
+
+
 var app = express();
 
 
@@ -15,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(errorhandler());
 app.use(bodyParser.json());
 
-app.use(require('./routes'));
-
+const routes = require('./routes');
+app.use('/api/v1', routes)
 
 
 if (process.env.ENVIRONMENT == "production") {
