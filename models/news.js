@@ -1,5 +1,4 @@
 var mongoose = require("mongoose");
-var mongoosePaginate = require("mongoose-paginate-v2");
 const { parseSort } = require("../utils/utils");
 
 var NewsSchema = new mongoose.Schema(
@@ -15,7 +14,6 @@ var NewsSchema = new mongoose.Schema(
     strict: true,
   }
 );
-NewsSchema.plugin(mongoosePaginate);
 
 var newsModel = mongoose.model("New", NewsSchema);
 
@@ -34,7 +32,7 @@ exports.findMany = function (query) {
   if (query.archiveDate) {
     query.archiveDate = { $exists: query.archiveDate == "true" };
   }
-  return newsModel.paginate(query, { sort: sort });
+  return newsModel.find(query).sort(sort);
 };
 
 exports.createOne = function (body) {
