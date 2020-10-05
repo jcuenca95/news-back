@@ -52,6 +52,7 @@ router.post(
   async (req, res, next) => {
     try {
       var result = await newsModel.createOne(req.body);
+      req.io.sockets.emit("refresh", result);
       res.json(result);
     } catch (error) {
       res.status(400).json({ message: "Error Creating" });
